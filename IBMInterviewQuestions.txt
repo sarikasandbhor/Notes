@@ -1,0 +1,120 @@
+1) How we can broadcast message in IBM BPM?
+
+2) User1,User2,User3 work on task and fill some data on form, if we are using multi-instance loop then how filled data by User1,2,3 can be visible for the User4 on one form?
+	-> Add multi instance loop parallely, attach list of business object as an output to that activity like (tw.local.custDetails[tw.system.step.counter])
+	-> This will form list of parallel instance
+	
+3) After closing task it should go back to work task custom page in process portal?
+
+4) SOAP & REST difference?
+	-> SOAP is a Simple Object Access Protocol, REST is a Representational State Transfer
+	-> SOAP is a Protocol , REST is a Architectural Pattern
+	-> SOAP can work with XML, REST can work with XML,JSON,Plain text,HTML etc.
+	-> SOAP Requires more bandwidth coz it contains lot of info, REST requires less bandwidth for sending messages.
+	
+5) What is shared business object? Is it can be reflect changed data in different process instances?
+6) What is ajax service? Types of ajax services?
+
+7) How to call/create instance of of one process app from other processapp?
+	-> By message event -> Use same toolkit as dependency in both app which having UCA implemented
+	-> By JavaScript API -> findProcessAppByName -> findProcessByName -> Input params & Call
+
+8) What is TWSearch api? Uses?
+	-> Define the columns of data that you want to retrieve.
+	-> Define any filters that you want to apply to a column.
+	-> Define the sort order for the returned records.
+	-> Define how results are organized. 
+	-> Execute the search and parse the results into a list of complex variables. 
+	
+9) How to call rest api from javascript?
+	-> BaseURL
+	-> Form Basic Auth passing username,password to new Packages.java.lang.String(username & password).getBytes() object
+	-> Form URL using java.net.URL(rest url)
+	-> Form urlConnection using url.openConnection()
+	-> urlConnection.setRequestMethod(Get/Put/Post) and urlConnection.setRequestProperty(Pass BasicAuth in this) for authentication
+	-> urlConnection.connect()
+	-> urlConnection.getInputStream()
+	-> bufferedReader()
+	
+10) How to do angular injection in bpm?
+	-> using jquery.min.js,bootstrap.js,bootstrap.min.css
+	
+11) If connectivity got lost then how to retry services in process after 10 mins dynamically?
+12) Life cycle of coach view
+	-> load - When the coach is run, the HTML is generated first and then the load() function is called to perform initialization logic, such as defining variables
+			- child load() executes first
+	-> View - After initialization is completed, the view() function is called before the user sees the view
+	-> Change - The change() function reacts to changes in binding or configuration data
+	-> Collaboration -  The collaboration(event) function is called if it is implemented, when multiple people work on the same view at the same time
+	-> Validate - The validate(event) function is called when a boundary event occurs and its Fire Validation property is set to Before
+	-> Unload - The unload() function is called when the coach view is removed from the coach
+			  - The parent view's unload() method gets called before the child view's unload() method
+	
+13) Show() & SetEnabled() & setVisible()
+	-> setVisible(false,false) //Hide
+	-> setVisible(false,true) //None
+	
+14) Inside table show row data on click of corresponding button on row
+	-> me.context._parent._rcdRef
+	
+15) Table vs service data table
+	-> Service Data Table 
+		- Service Data Table must specify a service flow with Ajax access that returns the data that will be displayed in the table. For this reason, do not bind the Service Data Table to a variable.
+	-> Table
+		- We just bind Business Object to display data
+
+14) Difference bw ibm bpm and baw
+	->
+15) Ways to start process
+	-> start message event, hit send message event from service/process
+	-> Through script -> startProcessByName
+	-> Through process portal -> Launch process
+	-> Attach as linked Process
+	
+16) What is Tracking? Its uses? Ways for tracking?
+	-> To create customized and third-party reports in IBM BPM, you identify the data to track and send that data to the Performance Data Warehouse.
+	-> To track data in a process, use autotracking, tracking groups, or both.
+	-> AutoTracking 
+		- Autotracking automatically captures data from tracking points at the entry and exit of each item in a process 
+	-> Tracking Groups
+		- Tracking groups provide more control over tracked data
+		- You can group variables that wanted to track
+
+17) Event Types
+	- start
+	- message
+	- ECM content
+	- Document
+	
+18) End Event types
+	- End event
+	- End message
+	- Error end event
+	- Terminate
+	
+19) Start event types in event subprocess
+	- Error
+	- Message
+	- SCA Service
+	- ECM Content
+	- Timer
+	
+20) Event Handler in CSHS
+	- Error event
+	- Data change event
+
+21)	What is Team retrieval service & Team Filter Service ?
+	-> Team Retrieval Service
+		-Team retrieval service is used to populate the members of a team (earlier called Participant Group) , the retrieval can be done by any means most commonly used is from a database call. 
+	-> Team Filter Service
+		-Team filer services are used to dynamically filter team members based on an input e.g. you dont want the person who did the earlier task to be member of the next assigned task you can filter out that member.
+	
+22) Excel download with merging two BO's?
+23) Responsive UI ?
+24) Architecture following?
+25) Durable Subscription?
+26) Repeat Activity?
+	-> After every given time interval it will flow from the process
+25) Call stored procedure in service flow
+26) What are Teamworks components?
+	->Shared Model, Process Server, Performance Server, Server Console, Process Portal, Authoring environment

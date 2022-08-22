@@ -1,0 +1,81 @@
+WESB -> Websphere Enterprise Service Bus -> -> Below V7.0 are WESB -> Mounted on WAS(Websphere Application Server)
+IID -> IBM Integration Designer -> Above v7.0 are IID -> Mounted on WPS(Websphere Process Server)
+Process Designer -> It is BPM -> Above v8.5 has these features -> Mounted on Process Center
+-------------------------------------------------------------------------------------------------------------------
+All these 3 Mounted on Websphere Application Server(WAS)
+-------------------------------------------------------------------------------------------------------------------
+
+1) Overview of EAI,SOA
+	1.1) EAI
+		-> Enterprise Application Integration
+		-> Enable the integration of software application & hardware systems.
+		-> Communication of different applications
+	1.2) SOA
+		-> Service Oriented Architecture
+		-> Divides application into different number of services, services communicate with each other & involve data passing
+		-> Ex. Application is of Health Care, Retail
+			-> Retail project -> Accounts & Orders
+			-> Accounts -> Payment,Refund,Payment Successful,Payment Denied
+			
+2) Overview of WPS and WESB
+
+3) SMO Structure
+	-> Service Messaging Operator
+	-> How the message flow that the SMO will tell
+	-> 3 Parts:
+	3.1) Co-relation context
+		-> Maintain data across request & response flow
+	3.2) Transient context
+		-> Maintain data only during one direction either request & response
+	3.2) Shared context
+		-> FanOut & FanIn
+			-> To execute looping functionality
+		-> It is thread based storage area that shared in same thread
+	
+4) Bindings
+	-> 4 type of Bindings:
+	4.1) SCA Bindings
+		-> Service Component Architecture
+		-> Communicate with 2 services inside same workspace then use SCA Bindings
+		-> Use to integrate 2 different modules using Import component (In client module)/Export component (In service provider)
+	4.2) JMS Bindings
+		-> Java Messaging Server
+		-> Communicate through message, enables messaging based on Java Messaging Service API
+	4.3) HTTP Bindings
+		-> Put/Get/Post/Delete methods
+		-> Transform data passed in message in native format to business object in SCA application and business object to native format.
+	4.4) WebService Bindings
+		-> Communicate with 2 services which are in 2 different workspaces then use WebService Bindings, Using REST & SOAP URLs
+		
+5) Adapters
+	-> 4 types of adapters:
+	5.1) Flat file Adapter
+		-> Execute file which is there in your local, from local to call it to in your workspace
+	5.2) FTP Adapter
+		-> Execute file which is there in your remote location, from remote to call it to in your workspace
+	5.3) JDBC Adapter
+		-> For Database connectivity
+	5.4) Email Adapter
+		-> Trigger mail to automatically
+		
+6) Business Process Choreographer(BPC)
+	-> In order to execute any human interaction in your service or in application we use BPC.
+	
+7) Human Tasks
+	-> 3 types of Human Tasks:
+	7.1) To-Do Task
+		-> System is assigning task to the human to complete
+	7.2) Invocation Task
+		-> Human assigning task to system to complete it
+	7.3) Collaboration Task
+		-> Human to Human interaction (i.e. Levels of Approvals)
+		
+8) Faults in Business Process
+	-> They are exceptions in BPEL Process and caught by Catch or CatchAll elements in Fault Handler
+	-> In BPEL having Request,Response and Fault
+	
+9) Business Rules
+	-> Conditions to develop particular service
+	
+Note:*
+	-> along with IID DB2 database will get installed
